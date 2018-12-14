@@ -27,7 +27,7 @@ public class InsertionSort {
             int j = i-1;  
 			//skaper loppen för att gämföra och sätter stop för negativa tal
             while ( (j > -1) && ( randomNumbers [j] > key ) ) {  
-                //jämför ursprungliga sifran med den som är bakom
+                //flytar fram sifranom den går in i loppen
 				randomNumbers [j+1] = randomNumbers [j];  
 				//ändrar så att nästa vara så ska sifran bakom gämföras med ursprungliga värdre
                 j--;

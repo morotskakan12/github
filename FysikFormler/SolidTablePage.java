@@ -5,7 +5,7 @@ import java.awt.*;
 	import javax.swing.*;
 
 public class SolidTablePage extends JFrame implements ActionListener{
-
+	
 	
 
 	
@@ -32,19 +32,19 @@ public class SolidTablePage extends JFrame implements ActionListener{
 
 	
 
+	private JButton back = new JButton ("back");
+
 	private JTable table = new JTable(data, columnNames);
 
-	private JButton back = new JButton("back");
-
-	
-
 	public SolidTablePage(){
-
+		
 		setLayout(new FlowLayout());
-
+		
 		add(table);add(back);
 
-		setSize(550,200);
+		back.setBorderPainted(false);back.addActionListener(this);
+
+		setSize(450,200);
 
 		setVisible(true);
 
@@ -52,11 +52,9 @@ public class SolidTablePage extends JFrame implements ActionListener{
 
 		
 
-		
-
 	}
 
-	public void actionPerformed (ActionEvent e){
+	public  void actionPerformed (ActionEvent e){
 
 	
 
@@ -68,8 +66,9 @@ public class SolidTablePage extends JFrame implements ActionListener{
 
 		dispose();
 
-	}
 
+	}
+	
 	
 
 }

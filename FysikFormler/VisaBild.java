@@ -5,7 +5,8 @@
 	import javax.swing.*;
 
 	public class  VisaBild extends JFrame implements ActionListener{
-
+			
+			
 		private JButton b1 = new JButton (" List");
 
 		private	JButton b2 = new JButton ("Formula");
@@ -19,12 +20,12 @@
 		public VisaBild(){
 
 		
-			setLayout(new FlowLayout());
+			
 			p5.setBackground(Color.white);
 
 			p5.setPreferredSize(new Dimension(70,20));
 
-			
+			setLayout(new FlowLayout());
 
 			add(b1);add(b2);add(b3);add(p5);
 
@@ -33,7 +34,9 @@
 			b2.setBorderPainted(false);b2.addActionListener(this);
 
 			b3.setBorderPainted(false);b3.addActionListener(this);
-
+				
+			pack();
+			
 			setSize(350,250);
 
 			setVisible(true);
@@ -46,20 +49,22 @@
 
 			
 
-			if (e.getSource() == b1);{
+			if (e.getSource() == b1){
 
-				 Tabel t = new Tabel();
+				 
 
 				 setVisible(false);
 
 				dispose();
 
+				}
+
+			
+
+			else if(e.getSource() == b2){
 				
-
-			}
-
-			if(e.getSource() == b2);{
-
+				Tabel t = new Tabel();
+				
 				setVisible(false);
 
 				dispose();
@@ -70,8 +75,9 @@
 
 				
 
-			if(e.getSource() == b3);{
+			else if(e.getSource() == b3){
 
+			
 				setVisible(false);
 
 				dispose();

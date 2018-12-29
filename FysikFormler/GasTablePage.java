@@ -27,17 +27,19 @@ public class GasTablePage extends JFrame implements ActionListener{
 
 	
 
-	private JButton back = new JButton ();
+	private JButton back = new JButton ("back");
 
 	private JTable table = new JTable(data, columnNames);
 
 	public GasTablePage(){
-
+		
+		setLayout(new FlowLayout());
+		
 		add(table);add(back);
 
 		back.setBorderPainted(false);back.addActionListener(this);
 
-		setSize(350,200);
+		setSize(250,200);
 
 		setVisible(true);
 
@@ -59,7 +61,6 @@ public class GasTablePage extends JFrame implements ActionListener{
 
 		dispose();
 
-		//System.exit();
 
 	}
 

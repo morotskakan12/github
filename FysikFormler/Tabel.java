@@ -6,12 +6,19 @@ public class  Tabel extends JFrame implements ActionListener{
 		private	JButton b2 = new JButton ("LiqudTable");
 		private JButton b3 = new JButton ("GasTable");
 		private JButton b4 = new JButton ("Exit");
-		private JPanel p5 = new JPanel();
+		private JPanel p3 = new JPanel();
+		private JPanel p1 = new JPanel();
+		private JPanel p2 = new JPanel();
+		
 		public Tabel(){
-			p5.setBackground(Color.white);
-			p5.setPreferredSize(new Dimension(70,20));
+			p1.setBackground(Color.white);
+			p2.setBackground(Color.white);
+			p3.setBackground(Color.white);
+			p1.setPreferredSize(new Dimension(350,20));
+			p2.setPreferredSize(new Dimension(350,20));
+			p3.setPreferredSize(new Dimension(350,20));
 			setLayout(new FlowLayout());
-			add(b1);add(b2);add(b3);add(b4);add(p5);
+			add(b1);add(p3);add(b2);add(p1);add(b3);add(p2);add(b4);
 			b1.setBorderPainted(false);b1.addActionListener(this);
 			b2.setBorderPainted(false);b2.addActionListener(this);
 			b3.setBorderPainted(false);b3.addActionListener(this);
@@ -24,38 +31,40 @@ public class  Tabel extends JFrame implements ActionListener{
 		}		
 			public void actionPerformed (ActionEvent e){
 
-			if (e.getSource() == b1);{
+			if (e.getSource() == b1){
 
 				 SolidTablePage STP = new SolidTablePage();
+				
+				setVisible(false);
 
-				 setVisible(false);
-
-				dispose();
-			}
-			if(e.getSource() == b2);{
+				dispose();}
+			
+			else if(e.getSource() == b2){
 
 				LiqudTablePage LTP = new LiqudTablePage();
 			
 				setVisible(false);
 
-				dispose();
+				dispose();}
 			
-			}		
-			if(e.getSource() == b3);{
+					
+			else if(e.getSource() == b3){
 
 				GasTablePage GTP = new GasTablePage();
 			
 				setVisible(false);
 
-				dispose();
-			}
-			if(e.getSource() == b4);{
+				dispose();}
 			
-				VisaBild start = new VisaBild();
+			else if(e.getSource() == b4){
+				
+				VisaBild VB = new VisaBild();
 				
 				setVisible(false);
 
 				dispose();
-			}
+				}
+			
+			
 		}
 		}

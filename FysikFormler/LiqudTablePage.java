@@ -32,19 +32,19 @@ String[] columnNames = {"Name","heatCapacity","density"};
 
 	
 
-	private JButton back = new JButton ();
+	private JButton back = new JButton ("back");
 
 	private JTable table = new JTable(data, columnNames);
 
-	private JPanel blank = new JPanel ();
-
-	public void LiqudTablePage(){
-
-		add(table);add(blank);add(back);
+	public LiqudTablePage(){
+		
+		setLayout(new FlowLayout());
+		
+		add(table);add(back);
 
 		back.setBorderPainted(false);back.addActionListener(this);
 
-		setSize(350,200);
+		setSize(300,200);
 
 		setVisible(true);
 
@@ -66,7 +66,6 @@ String[] columnNames = {"Name","heatCapacity","density"};
 
 		dispose();
 
-		//System.exit();
 
 	}
 }

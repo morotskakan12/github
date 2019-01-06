@@ -51,7 +51,7 @@
 
 			if (e.getSource() == b1){
 
-				 
+				 UserPage U = new UserPage();
 
 				 setVisible(false);
 

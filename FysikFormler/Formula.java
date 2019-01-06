@@ -46,7 +46,7 @@ public class Formula {
 
 			double p = 0; // Pascals
 
-			double d = LibraryLiquids.WATER.density; // densitet
+			double d = LibraryLiquds.WATER.density; // densitet
 
 			double h = deep; //hjupet
 
@@ -106,7 +106,7 @@ public class Formula {
 
 		public static double volumeToMassW(double volume){//9 anvendare senar välj
 
-			double mass = LibraryLiquids.WATER.density/volume;//anvendare senar får välja
+			double mass = LibraryLiquds.WATER.density/volume;//anvendare senar får välja
 
 			return mass;
 
@@ -178,7 +178,7 @@ public class Formula {
 
 		public static double heatW(double volume, double deltaT){//18
 
-			double energe= LibraryLiquids.WATER.heatCapacity*volume*deltaT;
+			double energe= LibraryLiquds.WATER.heatCapacity*volume*deltaT;
 
 			return energe;
 

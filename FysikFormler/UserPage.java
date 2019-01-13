@@ -35,7 +35,7 @@ public class UserPage extends JFrame implements ActionListener{
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
-	public  void actionPerformed (ActionEvent e){
+	public void actionPerformed (ActionEvent e){
 		if(e.getSource() == b1){
 		scroll.setViewportView(l1);
 		}
@@ -47,14 +47,24 @@ public class UserPage extends JFrame implements ActionListener{
 		}
 		else if (e.getSource () == b5){
 		
-		String strV0TextBox = t1.getText();
-		double impot = Double.parseDouble(strV0TextBox);
-		if (WhichFormal.whichFormal(impot)==1){
-		
-		}
-		else {
-		
-		}
+			String strV0TextBox = t1.getText();
+			double impot = Double.parseDouble(strV0TextBox);
+				if (WhichFormal.whichFormal(impot)==1){
+				
+					FormelaImpotOne FIO = new FormelaImpotOne(int impot);
+				
+					setVisible(false);
+
+					dispose();
+				}
+				else {
+					
+					FormelaImpotTwo FIT = new FormelaImpotTwo();
+					
+					setVisible(false);
+
+					dispose();
+				}
 		
 		}
 		
